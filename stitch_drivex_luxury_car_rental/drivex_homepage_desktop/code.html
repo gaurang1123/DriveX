@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-container": "#d9ae75",
+                    "surface-container-lowest": "#0e0e0e",
+                    "secondary-container": "#5f4112",
+                    "on-secondary-fixed": "#291800",
+                    "on-surface-variant": "#d7c3ae",
+                    "surface-container-low": "#1c1b1b",
+                    "on-primary-fixed": "#291800",
+                    "on-tertiary-container": "#004d6a",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#2a2a2a",
+                    "surface-dim": "#131313",
+                    "on-error": "#690005",
+                    "inverse-on-surface": "#313030",
+                    "tertiary-fixed-dim": "#7cd0ff",
+                    "background": "#131313",
+                    "on-primary-container": "#644000",
+                    "on-primary-fixed-variant": "#633f00",
+                    "tertiary-fixed": "#c4e7ff",
+                    "secondary-fixed-dim": "#ecbf85",
+                    "outline-variant": "#524534",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#004c69",
+                    "inverse-surface": "#e5e2e1",
+                    "primary-fixed": "#ffddb4",
+                    "tertiary": "#9bd9ff",
+                    "on-secondary": "#452b00",
+                    "primary": "#ffc880",
+                    "surface-container": "#201f1f",
+                    "tertiary-container": "#3ac2ff",
+                    "secondary": "#ecbf85",
+                    "on-background": "#e5e2e1",
+                    "error": "#ffb4ab",
+                    "inverse-primary": "#835500",
+                    "on-tertiary": "#00344a",
+                    "primary-container": "#f5a623",
+                    "on-secondary-fixed-variant": "#5f4112",
+                    "surface-tint": "#ffb955",
+                    "surface-bright": "#3a3939",
+                    "surface": "#131313",
+                    "on-primary": "#452b00",
+                    "primary-fixed-dim": "#ffb955",
+                    "on-tertiary-fixed": "#001e2c",
+                    "surface-container-highest": "#353534",
+                    "outline": "#9f8e7a",
+                    "surface-variant": "#353534",
+                    "secondary-fixed": "#ffddb4",
+                    "on-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(53, 53, 52, 0.2);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .anodized-gradient {
+            background: linear-gradient(135deg, #ffc880 0%, #f5a623 100%);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-[#1C1B1B]/80 backdrop-blur-md">
+<div class="text-2xl font-black tracking-tighter text-white font-['Space_Grotesk']">DriveX</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-[#F5A623] border-b-2 border-[#F5A623] pb-1 font-['Space_Grotesk'] tracking-tighter uppercase font-bold" href="#">Browse</a>
+<a class="text-[#D7C3AE] hover:text-white transition-colors font-['Space_Grotesk'] tracking-tighter uppercase font-bold" href="#">How it Works</a>
+<a class="text-[#D7C3AE] hover:text-white transition-colors font-['Space_Grotesk'] tracking-tighter uppercase font-bold" href="#">My Bookings</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-[#D7C3AE] hover:text-white transition-colors font-['Space_Grotesk'] tracking-tighter uppercase font-bold">Sign In</button>
+<button class="md:hidden text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Luxury Car" class="w-full h-full object-cover brightness-50" data-alt="Cinematic shot of a sleek black luxury sports car parked in a dark minimalist garage with dramatic rim lighting and atmospheric smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg6ip140rQeoeevmX8s8qQRPcPjB_zy4MM7uoDIasl7UM5wb0_rlV0KovKtl7-76SbwNSEXqwxtnkH4TvN-iWErsA2AD4MOIenoy_pBdIwNSC420XjiyNpAe1i72FMBEm9v0mBkFn6ejo-2LiOpDTO6oaujXYy7YjTMlXC44Ce8dxEmKPXiGQYjVbAx5Fsba1_t9XQKkH86TNVU2y9ke0EGBX20pHPjLOHvWxAwQIby7nvdV9vZ-OWaL8IN_Q320kzF4VLDYSN270"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center px-4 max-w-5xl mx-auto">
+<h1 class="font-headline text-5xl md:text-8xl font-black text-white tracking-tighter uppercase mb-6 leading-[0.9]">
+                    Your Drive.<br/><span class="text-primary">Your Rules.</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light">
+                    Precision engineering meets absolute freedom. Experience the world's most exclusive fleet on your own terms.
+                </p>
+<!-- Search/Booking Widget -->
+<div class="glass-panel p-2 md:p-4 rounded-xl max-w-4xl mx-auto w-full border border-outline-variant/15">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-2">
+<div class="flex flex-col items-start px-4 py-3 bg-surface-container-high rounded-lg text-left">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Location</span>
+<div class="flex items-center gap-2 w-full">
+<span class="material-symbols-outlined text-primary text-sm">location_on</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-white w-full placeholder:text-surface-variant" placeholder="Search City" type="text"/>
+</div>
+</div>
+<div class="flex flex-col items-start px-4 py-3 bg-surface-container-high rounded-lg text-left">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Pick-up</span>
+<div class="flex items-center gap-2 w-full">
+<span class="material-symbols-outlined text-primary text-sm">calendar_today</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-white w-full placeholder:text-surface-variant" placeholder="Select Date" type="text"/>
+</div>
+</div>
+<div class="flex flex-col items-start px-4 py-3 bg-surface-container-high rounded-lg text-left">
+<span class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">Drop-off</span>
+<div class="flex items-center gap-2 w-full">
+<span class="material-symbols-outlined text-primary text-sm">calendar_month</span>
+<input class="bg-transparent border-none p-0 focus:ring-0 text-white w-full placeholder:text-surface-variant" placeholder="Select Date" type="text"/>
+</div>
+</div>
+<button class="anodized-gradient rounded-lg h-full flex items-center justify-center gap-2 text-on-primary font-headline font-bold uppercase tracking-tighter active:scale-95 transition-all py-4 md:py-0">
+<span class="material-symbols-outlined">search</span>
+                            Search
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- How It Works -->
+<section class="py-32 px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="text-primary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">The Process</span>
+<h2 class="text-4xl md:text-5xl font-headline font-black text-white tracking-tighter leading-none">ENGINEERED FOR EASE</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm mb-2">Three simple steps to unlock the pinnacle of automotive performance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary" data-icon="directions_car">directions_car</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4 tracking-tight">Choose Car</h3>
+<p class="text-on-surface-variant leading-relaxed">Select from our curated collection of luxury sedans, exotic supercars, and high-performance SUVs.</p>
+</div>
+<div class="group">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary" data-icon="event_available">event_available</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4 tracking-tight">Book Instantly</h3>
+<p class="text-on-surface-variant leading-relaxed">Seamless digital verification and instant confirmation. No paperwork, no queues, no delays.</p>
+</div>
+<div class="group">
+<div class="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
+<span class="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary" data-icon="speed">speed</span>
+</div>
+<h3 class="text-2xl font-headline font-bold text-white mb-4 tracking-tight">Hit the Road</h3>
+<p class="text-on-surface-variant leading-relaxed">Pick up your vehicle or have it delivered to your doorstep. The road is yours to command.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Cars -->
+<section class="py-32 bg-background overflow-hidden">
+<div class="max-w-7xl mx-auto px-8 mb-12 flex justify-between items-end">
+<div>
+<span class="text-primary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">The Fleet</span>
+<h2 class="text-4xl md:text-5xl font-headline font-black text-white tracking-tighter">FEATURED MACHINES</h2>
+</div>
+<div class="flex gap-4">
+<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-colors text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-outline-variant/30 flex items-center justify-center hover:bg-surface-container transition-colors text-white">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-8 overflow-x-auto px-8 pb-12 hide-scrollbar snap-x">
+<!-- Card 1 -->
+<div class="min-w-[320px] md:min-w-[420px] snap-center group">
+<div class="relative h-[300px] rounded-xl overflow-hidden mb-6">
+<img alt="Porsche 911" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close-up profile of a metallic grey luxury sports car with sleek aerodynamics and high-gloss finish" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmFDhRYsIrXVjZs4-XnbiE5vdvh4fLMPT3QMncSsbDHIN6omeTv0PQHWr0YAdcHUsFk-PR24NU-rYv1HeRiOTAHLBeDeuGDtzpfO5FQiSVB-cFt21dl34LptHzacYHqDs1EhSSH9IftZWwcGVSatBljSOP3jbqmn-DH5aUKlUqoKBTTxyuv65nH4y1fF-yLtzRhL-lAHR31grPxMh-UBK2O7fvi1Ffuqks0ZqHGjpL69cL77BZ37B8YJT4g0p6QmKqNKBcaQms1w4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase text-white tracking-widest border border-white/10">Premium</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-headline font-bold text-white tracking-tight">PORSCHE 911 GT3</h4>
+<p class="text-on-surface-variant font-medium">911 Series</p>
+</div>
+<div class="text-right">
+<span class="text-primary font-headline font-black text-2xl">$450</span>
+<span class="text-on-surface-variant text-sm block">/ Day</span>
+</div>
+</div>
+<div class="flex gap-6 border-t border-outline-variant/10 pt-4">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">local_gas_station</span>
+<span>Gas</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">airline_seat_recline_extra</span>
+<span>2 Seats</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">settings_input_component</span>
+<span>Auto</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[320px] md:min-w-[420px] snap-center group">
+<div class="relative h-[300px] rounded-xl overflow-hidden mb-6">
+<img alt="BMW M5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Deep blue luxury sedan driving on a coastal road at sunset with light reflections on the hood" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9BvBBDFpIDZ4AvZKdG8XiDwIzXCz6UL81AaxsMW9Vrb3SukxhH9f30wDtauqVf13qisrW1vqu5Ll2lOnjMLuPNGwGQJ83BoY8eQbfwT96OX67qsXU_ZMOWqu0pN7wBpsG7_R6xNXEWR7Qxfi-SbkLfvj36AA9rgj7qXBvFjl-Sxy1kSpv-gEWss_Q-NYMNFq12Fu683M3Hm12jmH3prpjgLbLWIT9sTR-1ZIli4GRlzMr6HIOQcs3Z-o7BY8qmMNHT1Q1BkJS-78"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase text-white tracking-widest border border-white/10">Sport</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-headline font-bold text-white tracking-tight">BMW M5 COMPETITION</h4>
+<p class="text-on-surface-variant font-medium">M Series</p>
+</div>
+<div class="text-right">
+<span class="text-primary font-headline font-black text-2xl">$380</span>
+<span class="text-on-surface-variant text-sm block">/ Day</span>
+</div>
+</div>
+<div class="flex gap-6 border-t border-outline-variant/10 pt-4">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">local_gas_station</span>
+<span>Gas</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">airline_seat_recline_extra</span>
+<span>5 Seats</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">settings_input_component</span>
+<span>Auto</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[320px] md:min-w-[420px] snap-center group">
+<div class="relative h-[300px] rounded-xl overflow-hidden mb-6">
+<img alt="Tesla Model S" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Clean white high-end electric car interior with minimalist dashboard and large digital screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5aL42154_Xxuu5Mda6h1lP4Uj4CtNOcjjsdQ4DRfUdhd_ayWfoIgG27alr8bLH1jNiKoKxaCzynBfyDJCw8_dNGrRkMJXfnMH19oZ8oIAYqMRowitUS5Wv2ExsZE2srwHCXkjCfA44nBz_f1Nka8MgAsyHQJZtiSANEoWeuwsOhPVai5aM2IJ7GIJX6-oeZshUlGUNt2jOoRk6UFborHnc4H0VL6MBUUYblaLodPuL1_2Qu4NtglQF6rCIu1Q34vGRYyIwy5kzIM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase text-white tracking-widest border border-white/10">Electric</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-headline font-bold text-white tracking-tight">TESLA MODEL S PLAID</h4>
+<p class="text-on-surface-variant font-medium">Electric Performance</p>
+</div>
+<div class="text-right">
+<span class="text-primary font-headline font-black text-2xl">$320</span>
+<span class="text-on-surface-variant text-sm block">/ Day</span>
+</div>
+</div>
+<div class="flex gap-6 border-t border-outline-variant/10 pt-4">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">electric_car</span>
+<span>EV</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">airline_seat_recline_extra</span>
+<span>5 Seats</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">settings_input_component</span>
+<span>Auto</span>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="min-w-[320px] md:min-w-[420px] snap-center group">
+<div class="relative h-[300px] rounded-xl overflow-hidden mb-6">
+<img alt="Audi RSQ8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Modern high-performance SUV in a sleek silver finish driving through an urban setting with neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPOh4tnSz_2du464pupHLtBnLtKiyJN5nt5s8KJgaM-AetNqcV2Y9Y0PVO8Od1SNUG8ky49J4LJA4o_TsjuhR-g3lFaoB4VlBIUbkgPrIpobXD1SKz-JzxarwHSOj9LK1xnrniDoY2VL_N8OHPCiGlDbh-9msq6HsNlmtYtpr-MACdXzfaqYt0cUQcwdObdoHNvicwbRHouIzu1naxjqhubhir0oCr8AjF8g-Zm3Q3GwYW1pT9RzyLKLmF81IootKLZAiv4svclJE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-white/10 backdrop-blur-md rounded-full text-[10px] font-bold uppercase text-white tracking-widest border border-white/10">SUV</span>
+</div>
+</div>
+<div class="flex justify-between items-start mb-4">
+<div>
+<h4 class="text-2xl font-headline font-bold text-white tracking-tight">AUDI RSQ8</h4>
+<p class="text-on-surface-variant font-medium">RS Series</p>
+</div>
+<div class="text-right">
+<span class="text-primary font-headline font-black text-2xl">$420</span>
+<span class="text-on-surface-variant text-sm block">/ Day</span>
+</div>
+</div>
+<div class="flex gap-6 border-t border-outline-variant/10 pt-4">
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">local_gas_station</span>
+<span>Gas</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">airline_seat_recline_extra</span>
+<span>5 Seats</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-lg">settings_input_component</span>
+<span>Auto</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-20">
+<span class="text-primary font-headline font-bold tracking-widest uppercase text-sm mb-4 block">Client Voices</span>
+<h2 class="text-4xl md:text-5xl font-headline font-black text-white tracking-tighter leading-none uppercase">THE DRIVE EXPERIENCE</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Testimonial 1 -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/5">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-lg leading-relaxed mb-8 italic">"The process was completely frictionless. The Porsche was delivered to my hotel precisely on time and in showroom condition."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Julian M." data-alt="Professional portrait of a man in his 40s with a clean haircut and confident expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUx6QX__SROTdfrmOFnKOFrDLIAt87jnU3pMVImrep0hBRb5re6RPLVB6kolywfpIYrviU1niuaxMjGK3xuBXi1QjqAf0dsCciHygUU6qfhJ9A4RZkXdMMgb9RkA5eibyZiRtbH5xlC9sorLGKBFKkgutGAKll6GOHyHT2cvmWD4Uuc8Tn8y7MZrYe-7VY4yPsOdzIx0kXGZKZkxtNVo9XPecceGke0JYzFggUS68emUF2LiV83FODXzutntWSppBzOIMVp4JWTTM"/>
+</div>
+<div>
+<h5 class="text-white font-bold">Julian M.</h5>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">Architect</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/5 scale-105 shadow-2xl relative z-10">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-lg leading-relaxed mb-8 italic">"I've rented from many platforms, but DriveX is in a league of its own. The car was a masterpiece of engineering."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Marcus K." data-alt="Portrait of a sophisticated man with slight stubble in a dark studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5S0N4TRXIY52LMLjn09E5LvRq_5T5qZeU-raO8Z4MihTDDTsE7-QEFQuYvYZFxHoT8ggLM_1KRAweGYE6j14SoojoYxWZHhO4ZYwYqKfxneHOvdEPg6YIv3-Jz0zxDHGk8UImltBemecHKQ_25wDdm9rhl0sNE5TcksEbVebx57odTd6AGRcCw2YFPiDQbH-BiLJsi5c8UXCuD7O9nYgkmyt93o8dkJPyWq1Fi8-fiAC9CSuIlVK8jB48GUD72zjtDwedfyr1pzc"/>
+</div>
+<div>
+<h5 class="text-white font-bold">Marcus K.</h5>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">Tech Founder</p>
+</div>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-surface-container p-8 rounded-xl border border-outline-variant/5">
+<div class="flex text-primary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-on-surface text-lg leading-relaxed mb-8 italic">"Seamless digital check-in and the customer support was exceptional. This is how premium car rental should be."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="Sarah L." data-alt="Modern professional woman with a warm smile and elegant business attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBazpd_KfCtx1KnuoztRkbwdHlD6HOHh5pKefuuxc4nUbDtmfwDQvHmm3GaplJR5q30e6dF0njzsW2625XDk_7sXMu65wxNbF7n3H1WhXpDUja3Ab2h1vRwZ8ioc_duvD95Y8myy3U-jn1_J1VrgYSvXE8bnMmMzHGAVnZ6J70tb76jPsqlOU3dGhw59ST38dlltzkkndCQJ_ZDSI29u1LLT0op94fTr5teUvorl2ny8u3qyK9Hp0yxgbBTm1UPAgsmwbwFL1EcdU"/>
+</div>
+<div>
+<h5 class="text-white font-bold">Sarah L.</h5>
+<p class="text-on-surface-variant text-xs uppercase tracking-widest">Director</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-8 bg-background">
+<div class="max-w-7xl mx-auto glass-panel rounded-xl p-12 md:p-24 overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 hidden md:block">
+<img alt="Car detail" class="w-full h-full object-cover" data-alt="Abstract cinematic close-up of car headlights at night with bokeh light effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoqX3icp-CNBfDpHdwtCS1O5jApn2CxR3pBib9r9d8hQVytCVsm4kIcn7pg0usnUS3oKP6JFetcajp2aNANMbuAXUN4VqLXMfmTAotPjxgD1XT0u5lJBgP5XeeY5fglM_fkssmOaX_1ftGXiKl6vaklx5uELk97yExp2d-jm3259oGoR4sDSbJ8VZakn_z1X601z4xB2Z8KdZ_vov9nhkqAxP4WpmzloCJ_allXL9Boeb3ibOPo3mr3WoAY4N_SoKVjawBubI7Tzg"/>
+</div>
+<div class="relative z-10 max-w-2xl">
+<h2 class="text-5xl md:text-7xl font-headline font-black text-white tracking-tighter uppercase mb-8 leading-none">Ready to<br/>take control?</h2>
+<p class="text-on-surface-variant text-xl mb-12">Your next extraordinary journey starts with a single click. Browse our exclusive collection today.</p>
+<div class="flex flex-col md:flex-row gap-6">
+<button class="anodized-gradient px-10 py-5 rounded-lg text-on-primary font-headline font-black uppercase tracking-tighter text-lg active:scale-95 transition-all">Explore the Fleet</button>
+<button class="bg-surface-container-highest/50 backdrop-blur-md px-10 py-5 rounded-lg text-white font-headline font-black uppercase tracking-tighter text-lg border border-outline-variant/20 hover:bg-surface-container-highest transition-all">Contact Us</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-start gap-8 bg-[#0E0E0E]">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-bold text-white font-['Space_Grotesk']">DriveX</div>
+<p class="text-[#D7C3AE] font-['Manrope'] text-sm tracking-wide max-w-xs">Precision engineering for the modern adventurer. Premium rentals reimagined.</p>
+<p class="text-[#D7C3AE] font-['Manrope'] text-xs mt-4">© 2024 DriveX. Precision Engineering.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-3">
+<h6 class="text-white font-bold uppercase text-[10px] tracking-widest mb-2">Company</h6>
+<a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Fleet</a>
+<a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Locations</a>
+<a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-3">
+<h6 class="text-white font-bold uppercase text-[10px] tracking-widest mb-2">Legal</h6>
+<a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Privacy Policy</a>
+<a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm tracking-wide" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<h6 class="text-white font-bold uppercase text-[10px] tracking-widest mb-2">Social</h6>
+<div class="flex gap-4 text-[#F5A623]">
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">public</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-white transition-colors">alternate_email</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

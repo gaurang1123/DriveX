@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DriveX | Porsche 911 GT3 RS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#d9ae75",
+                "surface-container-lowest": "#0e0e0e",
+                "secondary-container": "#5f4112",
+                "on-secondary-fixed": "#291800",
+                "on-surface-variant": "#d7c3ae",
+                "surface-container-low": "#1c1b1b",
+                "on-primary-fixed": "#291800",
+                "on-tertiary-container": "#004d6a",
+                "on-error-container": "#ffdad6",
+                "surface-container-high": "#2a2a2a",
+                "surface-dim": "#131313",
+                "on-error": "#690005",
+                "inverse-on-surface": "#313030",
+                "tertiary-fixed-dim": "#7cd0ff",
+                "background": "#131313",
+                "on-primary-container": "#644000",
+                "on-primary-fixed-variant": "#633f00",
+                "tertiary-fixed": "#c4e7ff",
+                "secondary-fixed-dim": "#ecbf85",
+                "outline-variant": "#524534",
+                "error-container": "#93000a",
+                "on-tertiary-fixed-variant": "#004c69",
+                "inverse-surface": "#e5e2e1",
+                "primary-fixed": "#ffddb4",
+                "tertiary": "#9bd9ff",
+                "on-secondary": "#452b00",
+                "primary": "#ffc880",
+                "surface-container": "#201f1f",
+                "tertiary-container": "#3ac2ff",
+                "secondary": "#ecbf85",
+                "on-background": "#e5e2e1",
+                "error": "#ffb4ab",
+                "inverse-primary": "#835500",
+                "on-tertiary": "#00344a",
+                "primary-container": "#f5a623",
+                "on-secondary-fixed-variant": "#5f4112",
+                "surface-tint": "#ffb955",
+                "surface-bright": "#3a3939",
+                "surface": "#131313",
+                "on-primary": "#452b00",
+                "primary-fixed-dim": "#ffb955",
+                "on-tertiary-fixed": "#001e2c",
+                "surface-container-highest": "#353534",
+                "outline": "#9f8e7a",
+                "surface-variant": "#353534",
+                "secondary-fixed": "#ffddb4",
+                "on-surface": "#e5e2e1"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Space Grotesk"],
+                "body": ["Manrope"],
+                "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            font-family: 'Manrope', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(28, 27, 27, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .amber-gradient {
+            background: linear-gradient(135deg, #FFC880 0%, #F5A623 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-8 py-4 bg-[#1C1B1B]/80 backdrop-blur-md">
+<div class="text-2xl font-black tracking-tighter text-white font-['Space_Grotesk']">DriveX</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#F5A623] border-b-2 border-[#F5A623] pb-1 font-['Space_Grotesk'] tracking-tighter uppercase font-bold" href="#">Browse</a>
+<a class="text-[#D7C3AE] hover:text-white transition-colors font-['Space_Grotesk'] tracking-tighter uppercase font-bold" href="#">How it Works</a>
+<a class="text-[#D7C3AE] hover:text-white transition-colors font-['Space_Grotesk'] tracking-tighter uppercase font-bold" href="#">My Bookings</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-bold transition-all duration-300 hover:bg-[#2A2A2A] active:scale-95">Sign In</button>
+</nav>
+<main class="pt-24 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<div class="lg:col-span-8 space-y-6">
+<!-- Large Image Display -->
+<div class="relative aspect-[16/9] rounded-3xl overflow-hidden bg-surface-container-low group">
+<img alt="Porsche 911 GT3 RS" class="w-full h-full object-cover" data-alt="Sleek silver Porsche 911 GT3 RS parked on a coastal road at twilight with glowing amber headlights and sharp reflections" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAo78oZdRIKCdg3B7OF-7FBt7UVK_w89y4s4Anty_-seW8wWqtiOkdrLNJA-blOqFGdm0BYli1WtsezkuBxFhRHJ4758YjzWbyLtZWSbF2RwwdQoUriCzG6WQTXIweLgtHebpBTN1LipDL1g_L43vIF-q6Xzsy_l0ICWslludflEbnHr4BGAboDCPdR5g4iifJXvFj5cmOyZE-DPBnhhZLQHRkretehssa3tE-UC48EAUZduB7c4R4ZVuobfib0-MsMagt0WUegAo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-60"></div>
+</div>
+<!-- Thumbnail Strip -->
+<div class="flex gap-4 overflow-x-auto pb-4 scrollbar-hide">
+<div class="flex-shrink-0 w-24 md:w-32 aspect-square rounded-2xl overflow-hidden border-2 border-primary cursor-pointer">
+<img alt="Porsche Side View" class="w-full h-full object-cover" data-alt="Close up side profile of a silver luxury sports car emphasizing aerodynamic curves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK2FRV4-BEMZivE56suZLRWL8j8savjVhHRrVS8jvpe3NylTRfiPeAz1l7At0di-_DcLK2WBXgyU3Zut1xwoxN-BB38mpvlroOaLpfk8EsSRMCxjaW5UyyGxv5WjNKcs8xT-vd4wsRyWmrcuozd-jas5mFZnoT9nSZvePDOtD6sOFeXmH14l3zpdS_FNRdzVggU7e7aGQDLNjnOn8HxUh4wALfHNefFEUIuq_3O6iXoS-11d9ibGkNPjry8foH9rLImZj71dxPQec"/>
+</div>
+<div class="flex-shrink-0 w-24 md:w-32 aspect-square rounded-2xl overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Porsche Interior" class="w-full h-full object-cover" data-alt="High-tech interior of a sports car featuring carbon fiber details and digital cockpit display with amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvZ9p2pUb3vBZEvYYsBg1SCKdZYQ8L9EgT4y16FrJFJWywuPbBZfphiCBEpiY-WNg00rlIoku_XgMEqha42vxa7tjdgSPNr4yZkcMPvqmH_vioZo-aS26XQf5np3uAlGlCiHQ-PYH8-CG18hyeSba0qsekXE82ZtOnNGJnQyGqTuGtPl-g8GpBzwvyYmcxhSRcd_KdYl00oU7HSgkVNW8hcDfWzpROdtKeVWhtVXKTBylHeAdBLsrPnUw82HrQBSVpw-rokjeHPVU"/>
+</div>
+<div class="flex-shrink-0 w-24 md:w-32 aspect-square rounded-2xl overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Porsche Wheel" class="w-full h-full object-cover" data-alt="Close-up of a high-performance alloy wheel with yellow brake calipers on a dark grey pavement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjpScDTwPUycVCAEUPJyzEmPK3fxl7-j-EkYtcls-GGId3N8MwmTB0g-veXJxlgTmDMV2sAH08Sa6yR4yk9hWg6NbZPJEe43O5eX2x1xPBnDhYX0a3lLC77XKctwCQGO1TJxqAxXi8yhxGfLmH6ujPvuFZ6kzwJ9dY5Y9dMUrfeMMlSxttCvPQ9NRD5gfAQQn0bQpFtNf39P3PCux27TAiuQKDxEsEvsFlGhgon3d3pQOKub7osMaxEKrCG8g8UFF0Fp5CN9LhZjc"/>
+</div>
+<div class="flex-shrink-0 w-24 md:w-32 aspect-square rounded-2xl overflow-hidden cursor-pointer hover:opacity-80 transition-opacity">
+<img alt="Porsche Rear" class="w-full h-full object-cover" data-alt="Rear view of a silver Porsche 911 showing the iconic spoiler and sleek tail lights at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9ffpfOA_tELoBTJehWsys12805MYVYspgvrIH9D8y9v3VdTh0q2ScRthNtTWgV9sPJB3_pj-xgEGkLM5qB7CuezkNstiDbSmA50A-pK3fsIfjJ-vyLGlxkrQeycmH10ybgZh2M5IXTROb04rJapctpgWrg-ffUc1HRjmXOFSHWBzJNzCNyhXu-Pf3NbJZiwzOQ-ZL5Qs_Ily_CmD1ISY91NSQy2P-85b5VmSrMo-uLdjJtSqAvcG6KNTXQXelCvjS0vnGIDpORbY"/>
+</div>
+</div>
+<!-- Car Identity -->
+<div class="pt-4">
+<div class="flex flex-wrap items-center justify-between gap-4 mb-2">
+<h1 class="text-4xl md:text-6xl font-black font-headline tracking-tighter text-white">Porsche 911 GT3 RS</h1>
+<div class="flex items-center gap-1 bg-surface-container-high px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-primary scale-75" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold text-white">4.9</span>
+<span class="text-xs text-on-surface-variant">(128 reviews)</span>
+</div>
+</div>
+<!-- Spec Chips -->
+<div class="flex flex-wrap gap-3 mt-6">
+<div class="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">event_seat</span>
+<span class="text-sm font-medium text-on-surface">2 Seats</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">local_gas_station</span>
+<span class="text-sm font-medium text-on-surface">Petrol</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">settings_input_component</span>
+<span class="text-sm font-medium text-on-surface">Automatic</span>
+</div>
+<div class="flex items-center gap-2 bg-surface-container px-4 py-2 rounded-xl border border-outline-variant/10">
+<span class="material-symbols-outlined text-on-surface-variant text-lg">speed</span>
+<span class="text-sm font-medium text-on-surface">1,200 Mi</span>
+</div>
+</div>
+<!-- Description -->
+<div class="mt-8 space-y-4">
+<h3 class="text-xl font-bold font-headline text-white uppercase tracking-wider">The Engineering Masterpiece</h3>
+<p class="text-on-surface-variant leading-relaxed font-body max-w-3xl">
+                            The 911 GT3 RS is designed for performance without compromise. With its increased downforce and revised aerodynamics, this track-focused athlete is at home on the Nürburgring as it is on scenic mountain passes. Featuring a 4.0-liter naturally aspirated boxer engine, it delivers a spine-tingling 518 hp and reaches 9,000 rpm. Experience precision engineering at its finest.
+                        </p>
+</div>
+<!-- Amenities Bento -->
+<div class="mt-12">
+<h3 class="text-xl font-bold font-headline text-white uppercase tracking-wider mb-6">Features &amp; Amenities</h3>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-center justify-center gap-3 transition-colors hover:bg-surface-container">
+<span class="material-symbols-outlined text-primary text-3xl">map</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">GPS Nav</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-center justify-center gap-3 transition-colors hover:bg-surface-container">
+<span class="material-symbols-outlined text-primary text-3xl">bluetooth</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Bluetooth</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-center justify-center gap-3 transition-colors hover:bg-surface-container">
+<span class="material-symbols-outlined text-primary text-3xl">ac_unit</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Climate</span>
+</div>
+<div class="bg-surface-container-low p-6 rounded-2xl flex flex-col items-center justify-center gap-3 transition-colors hover:bg-surface-container">
+<span class="material-symbols-outlined text-primary text-3xl">camera_outdoor</span>
+<span class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">360 Cam</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Booking Sticky Sidebar -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 space-y-6">
+<div class="bg-surface-container rounded-[2rem] p-8 border border-outline-variant/15 shadow-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-3xl -z-10"></div>
+<div class="flex items-end justify-between mb-8">
+<div>
+<span class="text-on-surface-variant text-sm block mb-1">Daily Rate</span>
+<div class="flex items-baseline gap-1">
+<span class="text-4xl font-black text-white font-headline tracking-tighter">$850</span>
+<span class="text-on-surface-variant">/day</span>
+</div>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider">Top Rated</span>
+</div>
+<div class="space-y-4 mb-8">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Pick-up Date</label>
+<div class="bg-surface-container-high rounded-xl p-4 flex items-center justify-between cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="text-sm font-medium">May 24, 2024</span>
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant">Drop-off Date</label>
+<div class="bg-surface-container-high rounded-xl p-4 flex items-center justify-between cursor-pointer hover:bg-surface-container-highest transition-colors">
+<span class="text-sm font-medium">May 26, 2024</span>
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 pt-6 space-y-3 mb-8">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">2 Days × $850</span>
+<span class="text-white font-medium">$1,700</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Service Fee</span>
+<span class="text-white font-medium">$120</span>
+</div>
+<div class="flex justify-between text-lg font-black font-headline pt-3 border-t border-outline-variant/10">
+<span class="text-white tracking-tighter">TOTAL</span>
+<span class="text-primary tracking-tighter">$1,820</span>
+</div>
+</div>
+<button class="w-full amber-gradient text-on-primary py-5 rounded-2xl font-black font-headline uppercase tracking-widest text-lg shadow-lg shadow-primary/20 transition-all duration-300 hover:scale-[1.02] active:scale-95">
+                            Book Now
+                        </button>
+<p class="text-center text-[10px] uppercase tracking-[0.2em] text-on-surface-variant/60 mt-4">No hidden charges • Cancel anytime</p>
+</div>
+<div class="bg-surface-container-low rounded-2xl p-6 flex items-start gap-4 border border-outline-variant/10">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div>
+<p class="text-sm font-bold text-white mb-1">Platinum Insurance Included</p>
+<p class="text-xs text-on-surface-variant">Full coverage for collision and theft. $0 deductible for selected drivers.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Similar Cars Section -->
+<section class="mt-24">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl font-black font-headline tracking-tighter text-white uppercase">Similar Vehicles</h2>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all uppercase tracking-widest" href="#">
+                    View Fleet <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-surface-container rounded-3xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img alt="Ferrari 488" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern red Ferrari sports car parked under urban neon lights at night with dramatic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlfyiOvYmj_jN6nwlGnNLmC4OHdpElNCnF2eJyv89il2KcU2HEoK6Qi_p-dfeNXoTIaG5CC6-YtyuY9pDjii7-i0avt9GelurLn-ahzP4k6yPBvj_x48qdySCzAY0PTQnRIDBSMLUvUuI6dkDkRL6hk8qPP-tejat4wlh3P6uLqsMj5i5_Ibj4unS6hsCKVeiFXDaQc8-AaWQfsVrv6cYkBsbJOFkWAg2xAQNc59Qr8kJi8KUnRGRruWAfVRgmD9fCe0nHFMcWo7Q"/>
+<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-primary scale-75" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-white">5.0</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold font-headline text-white mb-4">Ferrari 488 Pista</h4>
+<div class="flex justify-between items-center">
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold text-primary">$1,200</span>
+<span class="text-xs text-on-surface-variant">/day</span>
+</div>
+<button class="bg-surface-container-high p-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container rounded-3xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img alt="Lamborghini Huracan" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Matte black Lamborghini Huracan in a dark studio setting with intense spotlighting on its sharp angles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPHWsMqDZDIx56Usut10gHtZDJsp8q-NUmadEHU65bgoFvokr9V64HVn0Mf6vDwBfyywHJGj53EOKKWV2c3_InDq_8C-uosWEgMMMrGYJbxxT9Iu_ODS9ch5DetLON-v7X4WjMale8CFR2B3LnZVFIytBDdYxEtMMo7XChFpik2iZ2c-YuFNuIn-tcdCQVWIozROKkWXg2-hp3WFMLagFyIvUO3UIfm2JmaHOrvoiELSOgxg2zUX502-XEa3gyWp1zzd6oShY_lMo"/>
+<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-primary scale-75" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-white">4.8</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold font-headline text-white mb-4">Lamborghini Huracán Evo</h4>
+<div class="flex justify-between items-center">
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold text-primary">$1,050</span>
+<span class="text-xs text-on-surface-variant">/day</span>
+</div>
+<button class="bg-surface-container-high p-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container rounded-3xl overflow-hidden hover:translate-y-[-8px] transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img alt="Audi R8" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="White Audi R8 speeding through a futuristic tunnel with motion blurred lights on the walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWsl4V3TuJ_B1EA45nzl7T5kxPGEQ4rNw0_gacxMRaAC-1ghVMm3X5gYkA8k3CFx-tNExiJdYv2Z3175e18S5IQDkWSEHGG_6TmIbvBsYQZ_U2pI9o7P_pW0-9K2gagGvwD5j0aBtP0XUazuT_XFYB7RXNQaxFQIl4JH3YVG0FvmL4NzuQhi62KSJspjglezfFXN77BvzcCP8P6h_zuNPt24RJlORAvkqg76k4EzJtQwCvlnUpNG-smKLDkem75UaiL6p7VCCVrRw"/>
+<div class="absolute top-4 right-4 bg-background/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-primary scale-75" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-white">4.9</span>
+</div>
+</div>
+<div class="p-6">
+<h4 class="text-xl font-bold font-headline text-white mb-4">Audi R8 V10 Plus</h4>
+<div class="flex justify-between items-center">
+<div class="flex items-baseline gap-1">
+<span class="text-xl font-bold text-primary">$780</span>
+<span class="text-xs text-on-surface-variant">/day</span>
+</div>
+<button class="bg-surface-container-high p-2 rounded-lg hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-start gap-8 bg-[#0E0E0E]">
+<div class="space-y-4 max-w-sm">
+<div class="text-xl font-bold text-white font-['Space_Grotesk']">DriveX</div>
+<p class="text-[#D7C3AE] font-['Manrope'] text-sm tracking-wide leading-relaxed">Experience the pinnacle of automotive engineering. Our fleet is curated for those who demand performance and prestige.</p>
+</div>
+<div class="flex flex-wrap gap-x-12 gap-y-6">
+<div class="space-y-4">
+<span class="text-[#F5A623] text-sm font-bold uppercase tracking-widest">Explore</span>
+<ul class="space-y-2">
+<li><a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm" href="#">Fleet</a></li>
+<li><a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm" href="#">Locations</a></li>
+<li><a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<span class="text-[#F5A623] text-sm font-bold uppercase tracking-widest">Company</span>
+<ul class="space-y-2">
+<li><a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm" href="#">Privacy Policy</a></li>
+<li><a class="text-[#D7C3AE] hover:text-[#FFC880] transition-colors font-['Manrope'] text-sm" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="w-full md:w-auto mt-8 md:mt-0 border-t md:border-t-0 border-outline-variant/10 pt-8 md:pt-0">
+<p class="text-[#D7C3AE] font-['Manrope'] text-sm tracking-wide">© 2024 DriveX. Precision Engineering.</p>
+</div>
+</footer>
+</body></html>
