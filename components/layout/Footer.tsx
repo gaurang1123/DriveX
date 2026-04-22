@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Users, MessageCircle, Mail } from 'lucide-react';
 
 const Footer = () => {
   const footerLinks = [
@@ -65,13 +66,13 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-6">
             <a href="#" className="text-on-surface-variant hover:text-white transition-colors">
-              <span className="material-symbols-outlined">social_distance</span>
+              <Users className="w-5 h-5" />
             </a>
             <a href="#" className="text-on-surface-variant hover:text-white transition-colors">
-              <span className="material-symbols-outlined">chat</span>
+              <MessageCircle className="w-5 h-5" />
             </a>
             <a href="#" className="text-on-surface-variant hover:text-white transition-colors">
-              <span className="material-symbols-outlined">alternate_email</span>
+              <Mail className="w-5 h-5" />
             </a>
           </div>
         </div>

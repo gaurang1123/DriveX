@@ -2,6 +2,44 @@
 
 import { ReactNode } from 'react';
 import { motion } from 'framer-motion';
+import {
+  Sliders,
+  Car,
+  Search,
+  Plus,
+  List,
+  User,
+  CreditCard,
+  Heart,
+  LogOut,
+  Headphones,
+  Receipt,
+  Star,
+  Settings,
+  CalendarCheck,
+  ArrowRight,
+  ArrowLeft,
+  ChevronLeft,
+  ChevronRight,
+  Menu,
+  Check,
+  CheckCircle,
+  Eye,
+  EyeOff,
+  AlertTriangle,
+  Phone,
+  Mail,
+  MapPin,
+  Calendar,
+  CalendarDays,
+  Fuel,
+  Users,
+  MessageCircle,
+  Gem,
+  Bell,
+  Clock,
+  Map,
+} from 'lucide-react';
 
 interface ButtonProps {
   children: ReactNode;
@@ -13,6 +51,47 @@ interface ButtonProps {
   fullWidth?: boolean;
   type?: 'button' | 'submit' | 'reset';
 }
+
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  tune: Sliders,
+  directions_car: Car,
+  search: Search,
+  add: Plus,
+  list: List,
+  person: User,
+  payments: CreditCard,
+  favorite: Heart,
+  logout: LogOut,
+  support_agent: Headphones,
+  receipt: Receipt,
+  star: Star,
+  settings: Settings,
+  event_available: CalendarCheck,
+  arrow_forward: ArrowRight,
+  arrow_back: ArrowLeft,
+  chevron_left: ChevronLeft,
+  chevron_right: ChevronRight,
+  menu: Menu,
+  check: Check,
+  check_circle: CheckCircle,
+  visibility: Eye,
+  visibility_off: EyeOff,
+  warning: AlertTriangle,
+  phone: Phone,
+  mail: Mail,
+  location_on: MapPin,
+  calendar_today: Calendar,
+  calendar_month: CalendarDays,
+  local_gas_station: Fuel,
+  social_distance: Users,
+  chat: MessageCircle,
+  alternate_email: Mail,
+  precision_manufacturing: Settings,
+  diamond: Gem,
+  concierge: Bell,
+  schedule: Clock,
+  map: Map,
+};
 
 const Button = ({
   children,
@@ -41,6 +120,8 @@ const Button = ({
 
   const widthClass = fullWidth ? 'w-full' : '';
 
+  const IconComponent = icon ? iconMap[icon] : null;
+
   return (
     <motion.button
       whileHover={{ scale: 1.05 }}
@@ -49,7 +130,7 @@ const Button = ({
       onClick={onClick}
       className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${className}`}
     >
-      {icon && <span className="material-symbols-outlined">{icon}</span>}
+      {IconComponent && <IconComponent className="w-5 h-5" />}
       {children}
     </motion.button>
   );

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { Filter, Check, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const BrowseFleetPage = () => {
   const cars = [
@@ -94,7 +95,7 @@ const BrowseFleetPage = () => {
             
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
-                <span className="material-symbols-outlined text-on-surface-variant">sort</span>
+                <Filter className="w-5 h-5 text-on-surface-variant" />
                 <select className="bg-surface-container-high text-white rounded-xl px-4 py-3 border-none focus:ring-1 focus:ring-primary-container">
                   <option>Price: Low to High</option>
                   <option>Price: High to Low</option>
@@ -150,7 +151,7 @@ const BrowseFleetPage = () => {
                 <div className="flex gap-4 mb-6">
                   {car.features.map((feature) => (
                     <div key={feature} className="flex items-center gap-2 text-on-surface-variant text-sm">
-                      <span className="material-symbols-outlined text-lg">check</span>
+                      <Check className="w-4 h-4" />
                       <span>{feature}</span>
                     </div>
                   ))}
@@ -167,7 +168,7 @@ const BrowseFleetPage = () => {
         {/* Pagination */}
         <div className="flex justify-center items-center gap-4 mb-16">
           <Button variant="secondary" className="w-12 h-12 p-0 rounded-full">
-            <span className="material-symbols-outlined">chevron_left</span>
+            <ChevronLeft className="w-5 h-5" />
           </Button>
           {[1, 2, 3, 4, 5].map((num) => (
             <button
@@ -182,7 +183,7 @@ const BrowseFleetPage = () => {
             </button>
           ))}
           <Button variant="secondary" className="w-12 h-12 p-0 rounded-full">
-            <span className="material-symbols-outlined">chevron_right</span>
+            <ChevronRight className="w-5 h-5" />
           </Button>
         </div>
       </div>

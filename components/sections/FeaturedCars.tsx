@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { ChevronLeft, ChevronRight, Fuel, Users, Settings } from 'lucide-react';
 
 const FeaturedCars = () => {
   const cars = [
@@ -43,6 +44,14 @@ const FeaturedCars = () => {
     },
   ];
 
+  const featureIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    Gas: Fuel,
+    Electric: Fuel,
+    '2 Seats': Users,
+    '5 Seats': Users,
+    Auto: Settings,
+  };
+
   return (
     <section className="py-32 bg-background overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 mb-12 flex justify-between items-end">
@@ -55,11 +64,11 @@ const FeaturedCars = () => {
           </h2>
         </div>
         <div className="flex gap-4">
-          <Button variant="secondary" className="w-12 h-12 p-0 rounded-full">
-            <span className="material-symbols-outlined">arrow_back</span>
+          <Button variant="secondary" className="w-12 h-12 p-0! rounded-full">
+            <ChevronLeft className="w-5 h-5 text-white" />
           </Button>
-          <Button variant="secondary" className="w-12 h-12 p-0 rounded-full">
-            <span className="material-symbols-outlined">arrow_forward</span>
+          <Button variant="secondary" className="w-12 h-12 p-0! rounded-full">
+            <ChevronRight className="w-5 h-5" />
           </Button>
         </div>
       </div>
@@ -75,7 +84,7 @@ const FeaturedCars = () => {
             className="min-w-[320px] md:min-w-[420px] snap-center group"
           >
             <div className="relative h-[300px] rounded-xl overflow-hidden mb-6">
-              <div 
+              <div
                 className="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-700"
                 style={{ backgroundImage: `url(${car.image})` }}
               />
@@ -103,12 +112,15 @@ const FeaturedCars = () => {
             </div>
             
             <div className="flex gap-6 border-t border-outline-variant/10 pt-4">
-              {car.features.map((feature) => (
-                <div key={feature} className="flex items-center gap-2 text-on-surface-variant text-sm">
-                  <span className="material-symbols-outlined text-lg">local_gas_station</span>
-                  <span>{feature}</span>
-                </div>
-              ))}
+              {car.features.map((feature) => {
+                const IconComponent = featureIconMap[feature] || Fuel;
+                return (
+                  <div key={feature} className="flex items-center gap-2 text-on-surface-variant text-sm">
+                    <IconComponent className="w-4 h-4" />
+                    <span>{feature}</span>
+                  </div>
+                );
+              })}
             </div>
             
             <Button variant="primary" className="w-full mt-6">

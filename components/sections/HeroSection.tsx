@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { MapPin, Calendar, CalendarDays } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -14,14 +15,14 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
           className="font-headline text-5xl md:text-8xl font-black text-white tracking-tighter uppercase mb-6 leading-[0.9]"
         >
           Your Drive.<br />
-          <motion.span 
+          <motion.span
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -31,7 +32,7 @@ const HeroSection = () => {
           </motion.span>
         </motion.h1>
         
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.1 }}
@@ -41,7 +42,7 @@ const HeroSection = () => {
         </motion.p>
 
         {/* Search/Booking Widget */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.2 }}
@@ -53,8 +54,8 @@ const HeroSection = () => {
                 Location
               </span>
               <div className="flex items-center gap-2 w-full">
-                <span className="material-symbols-outlined text-primary text-sm">location_on</span>
-                <input 
+                <MapPin className="text-primary w-4 h-4" />
+                <input
                   className="bg-transparent border-none p-0 focus:ring-0 text-white w-full placeholder:text-surface-variant"
                   placeholder="Search City"
                   type="text"
@@ -67,8 +68,8 @@ const HeroSection = () => {
                 Pick-up
               </span>
               <div className="flex items-center gap-2 w-full">
-                <span className="material-symbols-outlined text-primary text-sm">calendar_today</span>
-                <input 
+                <Calendar className="text-primary w-4 h-4" />
+                <input
                   className="bg-transparent border-none p-0 focus:ring-0 text-white w-full placeholder:text-surface-variant"
                   placeholder="Select Date"
                   type="text"
@@ -81,8 +82,8 @@ const HeroSection = () => {
                 Drop-off
               </span>
               <div className="flex items-center gap-2 w-full">
-                <span className="material-symbols-outlined text-primary text-sm">calendar_month</span>
-                <input 
+                <CalendarDays className="text-primary w-4 h-4" />
+                <input
                   className="bg-transparent border-none p-0 focus:ring-0 text-white w-full placeholder:text-surface-variant"
                   placeholder="Select Date"
                   type="text"
@@ -90,8 +91,8 @@ const HeroSection = () => {
               </div>
             </div>
             
-            <Button 
-              variant="primary" 
+            <Button
+              variant="primary"
               size="lg"
               icon="search"
               className="h-full py-4 md:py-0"

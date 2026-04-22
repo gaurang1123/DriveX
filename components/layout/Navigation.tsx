@@ -2,16 +2,17 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { Menu } from 'lucide-react';
 
 const Navigation = () => {
   const navItems = [
     { label: 'Browse', href: '/browse', active: true },
     { label: 'How it Works', href: '/how-it-works' },
-    { label: 'My Bookings', href: '/bookings' },
+    { label: 'My Bookings', href: '/dashboard' },
   ];
 
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -26,8 +27,8 @@ const Navigation = () => {
           <Link
             key={item.label}
             href={item.href}
-            className={`${item.active 
-              ? 'text-primary border-b-2 border-primary pb-1' 
+            className={`${item.active
+              ? 'text-primary border-b-2 border-primary pb-1'
               : 'text-on-surface-variant hover:text-white transition-colors'
             } font-headline tracking-tighter uppercase font-bold`}
           >
@@ -41,7 +42,7 @@ const Navigation = () => {
           Sign In
         </button>
         <button className="md:hidden text-white">
-          <span className="material-symbols-outlined">menu</span>
+          <Menu className="w-6 h-6" />
         </button>
       </div>
     </motion.header>

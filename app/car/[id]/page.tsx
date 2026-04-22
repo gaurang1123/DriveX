@@ -3,6 +3,16 @@
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
 import { useParams } from 'next/navigation';
+import { ChevronRight, Fuel, Users, Settings, Gauge, Car, Droplets } from 'lucide-react';
+
+const featureIconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  local_gas_station: Fuel,
+  airline_seat_recline_extra: Users,
+  settings_input_component: Settings,
+  speed: Gauge,
+  directions_car: Car,
+  oil_barrel: Droplets,
+};
 
 export default function CarDetailPage() {
   const params = useParams();
@@ -41,11 +51,11 @@ export default function CarDetailPage() {
             <li>
               <a href="/" className="hover:text-white transition-colors">Home</a>
             </li>
-            <li className="material-symbols-outlined text-sm">chevron_right</li>
+            <li><ChevronRight className="w-4 h-4" /></li>
             <li>
               <a href="/browse" className="hover:text-white transition-colors">Browse</a>
             </li>
-            <li className="material-symbols-outlined text-sm">chevron_right</li>
+            <li><ChevronRight className="w-4 h-4" /></li>
             <li className="text-primary">{car.name}</li>
           </ol>
         </nav>
@@ -129,20 +139,21 @@ export default function CarDetailPage() {
             <div>
               <h3 className="text-2xl font-headline font-bold text-white mb-6">Key Features</h3>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {car.features.map((feature) => (
-                  <div
-                    key={feature.label}
-                    className="bg-surface-container-low rounded-xl p-4 flex items-center gap-3"
-                  >
-                    <span className="material-symbols-outlined text-primary">
-                      {feature.icon}
-                    </span>
-                    <div>
-                      <p className="text-sm text-on-surface-variant">{feature.label}</p>
-                      <p className="text-white font-bold">{feature.value}</p>
+                {car.features.map((feature) => {
+                  const IconComponent = featureIconMap[feature.icon];
+                  return (
+                    <div
+                      key={feature.label}
+                      className="bg-surface-container-low rounded-xl p-4 flex items-center gap-3"
+                    >
+                      {IconComponent && <IconComponent className="text-primary w-5 h-5" />}
+                      <div>
+                        <p className="text-sm text-on-surface-variant">{feature.label}</p>
+                        <p className="text-white font-bold">{feature.value}</p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 

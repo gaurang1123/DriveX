@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Button from '@/components/ui/Button';
+import { User } from 'lucide-react';
 
 export default function DashboardPage() {
   const bookings = [
@@ -148,9 +149,7 @@ export default function DashboardPage() {
             <div className="glass-panel rounded-2xl p-6 border border-outline-variant/15">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="material-symbols-outlined text-primary text-3xl">
-                    person
-                  </span>
+                  <User className="text-primary text-3xl" />
                 </div>
                 <div>
                   <h3 className="text-xl font-headline font-bold text-white">Alex Morgan</h3>

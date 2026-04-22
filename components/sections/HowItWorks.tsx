@@ -1,21 +1,22 @@
 "use client";
 
 import { motion } from 'framer-motion';
+import { Car, CalendarCheck, Gauge } from 'lucide-react';
 
 const HowItWorks = () => {
   const steps = [
     {
-      icon: 'directions_car',
+      Icon: Car,
       title: 'Choose Car',
       description: 'Select from our curated collection of luxury sedans, exotic supercars, and high-performance SUVs.',
     },
     {
-      icon: 'event_available',
+      Icon: CalendarCheck,
       title: 'Book Instantly',
       description: 'Seamless digital verification and instant confirmation. No paperwork, no queues, no delays.',
     },
     {
-      icon: 'speed',
+      Icon: Gauge,
       title: 'Hit the Road',
       description: 'Pick up your vehicle or have it delivered to your doorstep. The road is yours to command.',
     },
@@ -49,9 +50,7 @@ const HowItWorks = () => {
               className="group"
             >
               <div className="w-16 h-16 bg-surface-container-highest rounded-xl flex items-center justify-center mb-8 group-hover:bg-primary transition-colors duration-500">
-                <span className="material-symbols-outlined text-primary text-3xl group-hover:text-on-primary">
-                  {step.icon}
-                </span>
+                <step.Icon className="text-primary text-3xl group-hover:text-on-primary" />
               </div>
               <h3 className="text-2xl font-headline font-bold text-white mb-4 tracking-tight">
                 {step.title}
