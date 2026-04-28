@@ -8,10 +8,38 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-surface-container-lowest to-surface-dim" />
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2070')] bg-cover bg-center brightness-50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          style={{
+            width: 'max(100vw, 100vh * (2752/1536))',
+            height: 'max(100vh, 100vw * (1536/2752))',
+          }}
+        >
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-surface-container-lowest to-surface-dim" />
+          <div className="absolute inset-0 w-full h-full bg-[url('/bg-1.jpeg')] bg-cover bg-center brightness-50" />
+          <div className="absolute inset-0 w-full h-full bg-gradient-to-t from-background via-transparent to-transparent" />
+
+          {/* Right Headlight */}
+          <div className="absolute w-40 h-40 rounded-full animate-pulse pointer-events-none"
+            style={{
+              top: '37%',
+              right: '19%',
+              background: 'radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,220,255,0.4) 0%, transparent 70%)',
+              // boxShadow: '0 0 40px 20px rgba(255,220,80,0.3), 0 0 80px 40px rgba(255,200,50,0.15)'
+            }}>
+          </div>
+
+          {/* Left Headlight */}
+          <div className="absolute w-40 h-40 rounded-full animate-pulse pointer-events-none"
+            style={{
+              top: '37%',
+              left: '19%',
+              background: 'radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,220,255,0.4) 0%, transparent 70%)',
+              // boxShadow: '0 0 40px 20px rgba(255,220,80,0.3), 0 0 80px 40px rgba(255,200,50,0.15)'
+            }}>
+          </div>
+        </div>
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
@@ -31,7 +59,7 @@ const HeroSection = () => {
             Your Rules.
           </motion.span>
         </motion.h1>
-        
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -62,7 +90,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            
+
             <div className="flex flex-col items-start px-4 py-3 bg-surface-container-high rounded-lg text-left">
               <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">
                 Pick-up
@@ -76,7 +104,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            
+
             <div className="flex flex-col items-start px-4 py-3 bg-surface-container-high rounded-lg text-left">
               <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-1">
                 Drop-off
@@ -90,7 +118,7 @@ const HeroSection = () => {
                 />
               </div>
             </div>
-            
+
             <Button
               variant="primary"
               size="lg"
